@@ -7,7 +7,6 @@ Created on Fri Dec 25 10:40:24 2020
 """
 #Q1: Write a program that reads a five-digit integer number, determines and prints how many
 #digits in the number are 7s.
-
 num=int(input('Enter 5 digit integer number: '))
 counter=0
 count=0
@@ -18,7 +17,12 @@ if(counter==5):
     for n in str(num):
         if n=='7':
             count+=1
-    print("There are",count,"7(s) in the number you typed")
+    if count==0:
+        print("There aren't any 7s")
+    elif count==1:
+        print("There is",count,"7 in the number you typed")
+    else:
+        print("There are",count,"7s in the number you typed")
 else:
     print("You haven't typed a 5-digit number, run the program again")
         
